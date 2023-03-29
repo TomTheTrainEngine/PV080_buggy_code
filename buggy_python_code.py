@@ -45,13 +45,14 @@ def authenticate(password):
     assert password == "Iloveyou", "Invalid password!"
     print("Successfully authenticated!")
 
+
 if __name__ == '__main__':
     print("Vulnerabilities:")
     print("1. Format string vulnerability: use string={person.__init__.__globals__[CONFIG][API_KEY]}")
     print("2. Code injection vulnerability: use string=;print('Own code executed') #")
     print("3. Yaml deserialization vulnerability: use string=file.yaml")
     print("4. Use of assert statements vulnerability: run program with -O argument")
-    choice  = input("Select vulnerability: ")
+    choice = input("Select vulnerability: ")
     if choice == "1": 
         new_person = Person("Vickie")  
         print_nametag(input("Please format your nametag: "), new_person)
